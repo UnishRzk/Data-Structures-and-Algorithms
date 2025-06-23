@@ -3,9 +3,11 @@ package com.unish.datastructures.queue;
 public class Main {
     public static void main(String[] args) {
 //        CustomQueue queue = new CustomQueue();
-        CircularQueue queue = new CircularQueue(5);
+//        CircularQueue queue = new CircularQueue(5);
 
-        for (int i = 0; i < 4; i++) {
+        DynamicQueue queue = new DynamicQueue(5);
+
+        for (int i = 0; i < 10; i++) {
             queue.enqueue(i);
         }
 
