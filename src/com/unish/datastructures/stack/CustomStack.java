@@ -47,22 +47,4 @@ public class CustomStack {
         return top == -1;
     }
 
-    public static void main(String[] args) throws StackException {
-
-        CustomStack stack = new CustomStack(15);
-
-        for (int i = 0; i < 11; i++) {
-            stack.Push(i);
-        }
-
-        for (int i = 0; i < 5; i++) {
-            System.out.println(stack.Pop());
-        }
-
-        System.out.println(stack.peek());
-        System.out.println(stack.peek());
-
-
-    }
-
 }
