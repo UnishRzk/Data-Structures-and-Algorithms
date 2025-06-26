@@ -23,6 +23,19 @@ public class CustomLinkedList {
         size+=1;
     }
 
+    public void insertLast(int val){
+        Node node = new Node(val);
+
+        if (tail == null){
+            insertFirst(val);
+            return;
+        }
+
+        tail.next = node;
+        tail = node;
+        size+=1;
+    }
+
     public void display(){
         Node temp = head;
 
