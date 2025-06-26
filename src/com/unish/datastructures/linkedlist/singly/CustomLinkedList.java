@@ -36,6 +36,63 @@ public class CustomLinkedList {
         size+=1;
     }
 
+    public void insertAt(int val,int index){
+        if (index == 0){
+            insertFirst(val);
+            return;
+        }
+        if (index == size){
+            insertLast(val);
+            return;
+        }
+
+        Node temp = head;
+
+        for (int i = 1; i < index; i++) {
+            temp = temp.next;
+        }
+        Node node = new Node(val);
+
+        node.next = temp.next;
+        temp.next = node;
+        size++;
+    }
+
+    public void deletefirst(){
+        head = head.next;
+        if (head == null){
+            tail = null;
+        }
+        size--;
+    }
+
+
+    public void deleteLast(){
+        Node temp = head;
+
+        for (int i = 1; i < size; i++) {
+            temp = temp.next;
+        }
+
+        tail = temp.next;
+        temp = temp.next;
+        temp = null;
+    }
+
+    public  void  deleteAt(int index){
+        Node prev = head;
+
+        for (int i = 1; i < index; i++) {
+            prev = prev.next;
+        }
+
+        Node del = prev.next;
+
+        prev.next = del.next;
+
+    }
+
+
     public void display(){
         Node temp = head;
 
